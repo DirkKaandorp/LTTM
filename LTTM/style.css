@@ -1,0 +1,124 @@
+/* KLEURENPALET in CSS HEX:
+
+--rich-black-fogra-39: #0a100dff;
+--sage: #b9baa3ff;
+--timberwolf: #d6d5c9ff;
+--auburn: #a22c29ff;
+--burnt-umber: #902923ff;
+
+*/
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    background-color: #d6d5c9ff;
+}
+
+.container {
+     display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: 
+    "b b b b b"
+    "n n n n n"
+    "t t t i i"
+    "p p w w w"
+    "f f f f f"
+    ;
+}
+
+.fotogalerij {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fotogalerij > div > img {
+    width: 150px;
+    height: 100px;
+}
+
+.subcontainer {
+    background-color: #b9baa3ff;
+    color: #902923ff;
+}
+
+.banner,
+.navmenu,
+.tekstvak1,
+.tekstvak2,
+.plaatje1,
+.plaatje2,
+.footer {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: #a22c29ff;
+    color: whitesmoke;
+    border: 10px solid black;
+
+}
+
+.banner {
+    grid-area: b;
+}
+
+.navmenu {
+    grid-area: n;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.tekstvak1 {
+    grid-area: t;
+}
+
+.plaatje1 {
+    grid-area: i;
+    width: auto;
+    height: 400px;
+}
+
+.plaatje2 {
+    grid-area: p;
+    width: auto;
+    height: 400px;
+}
+.tekstvak2 {
+    grid-area: w;
+}
+
+.footer {
+    grid-area: f;
+    text-align: center;
+}
+
+img {
+      max-width: 100%;
+      max-height: 100%;
+}
+
+.tekstvak1,
+.tekstvak2 {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+}
+
+.menubutton {
+    width: 200px;
+    height: 60px;
+    border: 2px solic black;
+    border-radius: 5px;
+    background-color: gold;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-variant: small-caps;
+    font-size: 40px;
+}
+
+header > img {
+    min-width: 400px;
+}
