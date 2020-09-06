@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-     display: grid;
+    display: grid;
     grid-template-columns: auto auto auto auto auto;
     grid-template-rows: auto auto auto auto auto;
     grid-template-areas: 
@@ -33,10 +33,6 @@ body {
     flex-wrap: wrap;
 }
 
-.fotogalerij > div > img {
-    width: 150px;
-    height: 100px;
-}
 
 .subcontainer {
     background-color: #b9baa3ff;
@@ -86,6 +82,7 @@ body {
     width: auto;
     height: 400px;
 }
+
 .tekstvak2 {
     grid-area: w;
 }
@@ -121,4 +118,64 @@ img {
 
 header > img {
     min-width: 400px;
+}
+
+/* CSS voor contactformulier */
+
+
+form {
+    padding: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+.stemsoort > input {
+    margin-left: 50px;
+}
+
+form > textarea {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.contact-button {
+    width: 200px;
+    height: 60px;
+    border: 2px solic black;
+    border-radius: 5px;
+    background-color:white;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+
+/* CSS voor de plaatjes-pagina */
+
+.plaatjescontainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 6fr 1fr;
+    grid-template-areas: 
+    "b"
+    "n"
+    "g"
+    "f"
+    ;
+}
+
+.fotogalerij {
+    grid-area: g;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.fotogalerij > div > img {
+    width: 300px;
+    height: 200px;
 }

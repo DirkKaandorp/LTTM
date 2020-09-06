@@ -33,26 +33,61 @@
                 </button>
             </nav>
         </div>
-        <div class="tekstvak1">
-            <h3>Rock & Roll</h3>
-            <ul>
-                <li>liedje 1</li>
-                <li>liedje 2</li>
-            </ul>
-        </div>
-        <div class="tekstvak2">
-            <h3>Franse chansons</h3>
-                <ul>
-                    <li>chanson 1</li>
-                    <li>chanson 2</li>
-                </ul>
-        </div>
-        <div class="plaatje1">
-            <img src="pics/IMG_6680.JPG" alt="LTTM in actie" max-width="150px";>
-        </div>
-        <div class="plaatje2">
-            <img src="pics/IMG_6656.JPG" alt="Altijd lol bij LTTM" max-width="150px">
-        </div>
+        <form>   <!-- NIET VERGETEN: action- en method-attribute!! -->
+
+            <!--
+                Hier komen invoervelden voor:
+                - naam
+                - e-mail
+                - telefnr
+                - keuzemenu voor:
+                            - belangstelling meezingen + radio-buttons voor stemsoort (S, M, A of weet niet)
+                            - belangstelling optreden
+                - tekstvak voor boodschap
+                wisknop
+                verzendknop
+            -->
+
+            <!-- naamsgegevens -->
+            <div>
+                <label for="voornaam">Voornaam:</label><br>
+                <input type="text" id="voornaam" name="voornaam"><br>
+            </div>
+            <div>
+                <label for="achternaam">Achternaam</label><br>
+                <input type="text" id="achternaam" name="achternaam"><br><br>
+            </div>
+
+            <!-- contactgegevens -->
+            <label for="phone">Telefoon:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="020-1234567">
+            <label for="mobile">Mobiel:</label>
+            <input type="tel" id="mobile" name="mobile" pattern="(0-9){2}-(0-0){8}" placeholder="06-12345678">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email">
+
+            <!-- overige gegevens -->
+            <div class="stemsoort">
+                <p>Ik wil graag komen proefzingen. Ik ben:</p>
+                <input type="radio" id="sopraan" name="stemsoort" value="sopraan">
+                <label for="sopraan">sopraan</label>
+                <input type="radio" id="mezzo" name="stemsoort" value="mezzo">
+                <label for="mezzo">mezzo</label>
+                <input type="radio" id="alt" name="stemsoort" value="alt">
+                <label for="alt">alt</label>
+                <input type="radio" id="onbekend" name="stemsoort" value="onbekend">
+                <label for="onbekend">weet ik niet</label>
+            </div>
+            <!-- tekstvak voor boodschap -->
+            <textarea name="message" rows="20" cols="40">
+            Laat hier een boodschap achter
+            </textarea>
+
+            <!-- reset- en submit-knop -->
+            <input class="contact-button" type="submit" value="Verzenden">
+            <input class="contact-button" type="reset" value="Wissen">
+        </form>
+
          <div class="footer">
             <footer>
                 <h6>Deze website is gebouwd door Dirk Kaandorp</h6>
